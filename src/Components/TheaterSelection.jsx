@@ -15,8 +15,8 @@ const TheaterSelection = () => {
 
     const handelBooking = async (values) => {
         try {
-           let resp = await axios.post("http://localhost:8500/bookings/updateBookings", values);
-            // let resp = await axios.post("https://capstone-project-backend-3-jlch.onrender.com/bookings/updateBookings", values);
+           //let resp = await axios.post("http://localhost:8500/bookings/updateBookings", values);
+             let resp = await axios.post("https://capstone-project-backend-3-jlch.onrender.com/bookings/updateBookings", values);
             (resp.data.message === "Booked Successfully") ? toast.success(resp.data.message) : toast.error(resp.response.statusText);
             // console.log(resp);
         } catch (error) {

@@ -11,8 +11,8 @@ const TicketBooking = () => {
 
     const fetchMovieData = async () => {
         try {
-            const res = await axios.get('http://localhost:8500/uploadapi/admin/allmovies')
-            // const res = await axios.get('https://movie-ticket-application-backend-main.onrender.com/uploadapi/admin/allmovies')
+           // const res = await axios.get('http://localhost:8500/uploadapi/admin/allmovies')
+            const res = await axios.get('https://movie-ticket-application-backend-main.onrender.com/uploadapi/admin/allmovies')
             setMoviesData(res.data.data)
             
 
@@ -23,8 +23,8 @@ const TicketBooking = () => {
 
     const fetchCarouselData = async () => {
         try {
-            const imageRes = await axios.get('http://localhost:8500/uploadapi/admin/allimages')
-            // const imageRes = await axios.get('https://movie-ticket-application-backend-main.onrender.com/uploadapi/admin/allimages')
+            //const imageRes = await axios.get('http://localhost:8500/uploadapi/admin/allimages')
+             const imageRes = await axios.get('https://movie-ticket-application-backend-main.onrender.com/uploadapi/admin/allimages')
            setCarouselData(imageRes.data.data)
         } catch (error) {
             console.log(error)

@@ -51,8 +51,8 @@ const RegisterPage = () => {
     const onSubmit  = async(values)=>{
         // console.log("Register Api Payloads", values);
         try {
-           const registerResponse =  await axios.post('http://localhost:8500/movieticketapi/user/register',values)
-            // const registerResponse =  await axios.post('https://movie-ticket-application-backend-main.onrender.com/movieticketapi/user/register',values)
+          // const registerResponse =  await axios.post('http://localhost:8500/movieticketapi/user/register',values)
+             const registerResponse =  await axios.post('https://movie-ticket-application-backend-main.onrender.com/movieticketapi/user/register',values)
             console.log(registerResponse)
             toast.success(registerResponse.data.message)
             setTimeout(() => {

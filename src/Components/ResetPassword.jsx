@@ -45,8 +45,8 @@ const ResetPassword = () => {
 
     const validateToken = async ()=>{
         try {
-           let res = await axios.get('http://localhost:8500/movieticketapi/user/alluserslist')
-            // let res = await axios.get('https://movie-ticket-application-backend-main.onrender.com/movieticketapi/user/alluserslist')
+           //let res = await axios.get('http://localhost:8500/movieticketapi/user/alluserslist')
+            let res = await axios.get('https://movie-ticket-application-backend-main.onrender.com/movieticketapi/user/alluserslist')
 
             if(res.data && res.data.users){
                 const reqUser = res.data.find((user)=>user.email===email)
@@ -76,8 +76,8 @@ const ResetPassword = () => {
     })
     const onSubmit  =  async (values) =>{
         try {
-           const res = await axios.put('http://localhost:8500/movieticketapi/user/resetpassword',{...values,email})
-            // const res = await axios.put('https://movie-ticket-application-backend-main.onrender.com/movieticketapi/user/resetpassword',{...values,email})
+          // const res = await axios.put('http://localhost:8500/movieticketapi/user/resetpassword',{...values,email})
+             const res = await axios.put('https://movie-ticket-application-backend-main.onrender.com/movieticketapi/user/resetpassword',{...values,email})
             toast.success(res.data.message)
             setTimeout(() => {
                 navigate('/')

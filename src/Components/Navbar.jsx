@@ -11,8 +11,8 @@ const Navbar = () => {
     const handleLogout  = async()=>{
         try {
             setIsLoading(true)
-           const res = await axios.get('http://localhost:8500/movieticketapi/user/logout')
-            // const res = await axios.get('https://movie-ticket-application-backend-main.onrender.com/movieticketapi/user/logout')
+           //const res = await axios.get('http://localhost:8500/movieticketapi/user/logout')
+             const res = await axios.get('https://movie-ticket-application-backend-main.onrender.com/movieticketapi/user/logout')
             Cookies.remove('token')
             localStorage.removeItem('email')
             localStorage.removeItem('username')

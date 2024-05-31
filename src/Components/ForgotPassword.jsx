@@ -45,8 +45,8 @@ const ForgotPassword = () => {
 
     const onSubmit = async (values)=>{
         try {
-           const res = await axios.post('http://localhost:8500/movieticketapi/user/forgotpassword',values)
-            // const res = await axios.post('https://movie-ticket-application-backend-main.onrender.com/movieticketapi/user/forgotpassword',values)
+           //const res = await axios.post('http://localhost:8500/movieticketapi/user/forgotpassword',values)
+             const res = await axios.post('https://movie-ticket-application-backend-main.onrender.com/movieticketapi/user/forgotpassword',values)
             toast.success(res.data.message)
             setTimeout(() => {
                 navigate('/')

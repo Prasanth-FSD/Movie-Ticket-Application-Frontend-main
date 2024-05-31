@@ -50,8 +50,8 @@ const LoginPage = ({setUsername,setEmail,email}) => {
 
     const onSubmit = async (values) =>{
         try {
-           const res  = await axios.post('http://localhost:8500/movieticketapi/user/login',values)
-            // const res  = await axios.post('https://movie-ticket-application-backend-main.onrender.com/movieticketapi/user/login',values)
+           //const res  = await axios.post('http://localhost:8500/movieticketapi/user/login',values)
+             const res  = await axios.post('https://movie-ticket-application-backend-main.onrender.com/movieticketapi/user/login',values)
             setUsername(res.data.data.username)
             console.log(res.data.data)
             setEmail(values.email)
